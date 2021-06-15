@@ -32,10 +32,10 @@ public class SpaDayController {
                 "<input type = 'text' name = 'name'>" +
                 "<br>Skin type: <br>" +
                 "<select name = 'skintype'>" +
-                "<option value = 'oily'>Oily</option>" +
-                "<option value = 'combination'>Combination</option>" +
-                "<option value = 'normal'>Normal</option>" +
-                "<option value = 'dry'>Dry</option>" +
+                "<option value = 'Oily'>Oily</option>" +
+                "<option value = 'Combination'>Combination</option>" +
+                "<option value = 'Normal'>Normal</option>" +
+                "<option value = 'Dry'>Dry</option>" +
                 "</select><br>" +
                 "Manicure or Pedicure? <br>" +
                 "<select name = 'manipedi'>" +
@@ -62,6 +62,10 @@ public class SpaDayController {
                 appropriateFacials.add(facials.get(i));
             }
         }
+        model.addAttribute("name", name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("manipedi", manipedi);
+        model.addAttribute("appropriateFacials", appropriateFacials);
 
         return "menu";
     }
